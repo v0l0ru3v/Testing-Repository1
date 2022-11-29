@@ -1,0 +1,46 @@
+{
+    "name": "basic-layout-for-first-course",
+    "version": "1.0.0",
+    "prettier": "prettier-airbnb-config",
+    "private": false,
+    "description": "Сборщик, подготовленный для выполнения лабораторных работ первого курса",
+    "scripts": {
+        "test": "npx eslint . --ext .js",
+        "build": "webpack --mode production",
+        "start": "webpack-dev-server --progress --hot"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "prettier --write . && git add -A ."
+        }
+    },
+    "devDependencies": {
+        "@babel/preset-env": "7.19.1",
+        "babel-loader": "8.2.5",
+        "copy-webpack-plugin": "11.0.0",
+        "css-loader": "6.7.1",
+        "css-minimizer-webpack-plugin": "4.1.0",
+        "eslint": "^8.23.1",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "html-loader": "4.1.0",
+        "html-webpack-plugin": "5.5.0",
+        "husky": "^8.0.1",
+        "mini-css-extract-plugin": "2.6.1",
+        "pre-commit": "^1.2.2",
+        "prettier": "^1.19.1",
+        "prettier-airbnb-config": "^1.0.0",
+        "stylelint-config-airbnb": "0.0.0",
+        "webpack": "5.74.0",
+        "webpack-cli": "4.10.0",
+        "webpack-dev-server": "4.11.1"
+    },
+    "engines": {
+        "node": "16"
+    },
+    "dependencies": {
+        "string-replace-loader": "^3.1.0",
+        "style-loader": "3.3.1"
+    }
+}
